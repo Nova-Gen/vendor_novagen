@@ -1,6 +1,6 @@
 # CDMA APN list
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/etc/apns-conf-cdma.xml:system/etc/apns-conf.xml
+    vendor/novagen/prebuilt/common/etc/apns-conf-cdma.xml:system/etc/apns-conf.xml
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver

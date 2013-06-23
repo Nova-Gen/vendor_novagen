@@ -2,19 +2,19 @@
 $(call inherit-product, device/samsung/quincyatt/full_quincyatt.mk)
 
 # Inherit GSM common stuff.
-$(call inherit-product, vendor/rootbox/configs/gsm.mk)
+$(call inherit-product, vendor/novagen/configs/gsm.mk)
 
 # Inherit RootBox common bits
-$(call inherit-product, vendor/rootbox/configs/common.mk)
+$(call inherit-product, vendor/novagen/configs/common.mk)
 
 # Quincyatt overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/quincyatt
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/quincyatt
 
 # PA OVERLAY_TARGET
 OVERLAY_TARGET := pa_xhdpi
 
 # Setup device specific product configuration.
-PRODUCT_NAME := rootbox_quincyatt
+PRODUCT_NAME := novagen_quincyatt
 PRODUCT_BRAND := Samsung
 PRODUCT_DEVICE := quincyatt
 PRODUCT_MODEL := SGH-I717
@@ -25,4 +25,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SGH-I717 TARGET_DEVICE=SGH-I717 BUI
 
 # Copy bootanimation.zip
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
+    vendor/novagen/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip

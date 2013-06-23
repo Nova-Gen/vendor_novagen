@@ -2,16 +2,16 @@
 $(call inherit-product, device/asus/grouper/full_grouper.mk)
 
 # Inherit RootBox common_tablet bits
-$(call inherit-product, vendor/rootbox/configs/common_tablet.mk)
+$(call inherit-product, vendor/novagen/configs/common_tablet.mk)
 
 # Grouper Overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/grouper
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/grouper
 
 # PA OVERLAY_TARGET
 OVERLAY_TARGET := pa_tvdpi
 
 # Setup device specific product configuration.
-PRODUCT_NAME := rootbox_grouper
+PRODUCT_NAME := novagen_grouper
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := grouper
 PRODUCT_MODEL := Nexus 7
@@ -22,6 +22,6 @@ PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nak
 
 # Copy bootanimation.zip
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
+    vendor/novagen/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation.zip
 
 

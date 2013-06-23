@@ -2,19 +2,19 @@
 $(call inherit-product, device/samsung/d2spr/full_d2spr.mk)
 
 # Inherit CDMA common stuff.
-$(call inherit-product, vendor/rootbox/configs/cdma.mk)
+$(call inherit-product, vendor/novagen/configs/cdma.mk)
 
 # Inherit RootBox common bits
-$(call inherit-product, vendor/rootbox/configs/common.mk)
+$(call inherit-product, vendor/novagen/configs/common.mk)
 
 # S3 Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s3-common
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/s3-common
 
 # PA OVERLAY_TARGET
 OVERLAY_TARGET := pa_i9300
 
 # Setup device specific product configuration.
-PRODUCT_NAME := rootbox_d2spr
+PRODUCT_NAME := novagen_d2spr
 PRODUCT_BRAND := Samsung
 PRODUCT_DEVICE := d2spr
 PRODUCT_MODEL := SPH-L710
@@ -25,5 +25,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=d2spr TARGET_DEVICE=d2spr BUILD_FIN
 
 # Copy bootanimation.zip
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_720.zip:system/media/bootanimation.zip
+    vendor/novagen/prebuilt/bootanimation/bootanimation_1280_720.zip:system/media/bootanimation.zip
 

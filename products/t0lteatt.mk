@@ -2,19 +2,19 @@
 $(call inherit-product, device/samsung/t0lteatt/full_t0lteatt.mk)
 
 # Inherit GSM common stuff
-$(call inherit-product, vendor/rootbox/configs/gsm.mk)
+$(call inherit-product, vendor/novagen/configs/gsm.mk)
 
 # Inherit RootBox common bits
-$(call inherit-product, vendor/rootbox/configs/common.mk)
+$(call inherit-product, vendor/novagen/configs/common.mk)
 
 # Galaxy Note Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/note-common
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/note-common
 
 # PA OVERLAY_TARGET
 OVERLAY_TARGET := pa_xhdpi
 
 # Setup device specific product configuration.
-PRODUCT_NAME := rootbox_t0lteatt
+PRODUCT_NAME := novagen_t0lteatt
 PRODUCT_BRAND := Samsung
 PRODUCT_DEVICE := t0lteatt
 PRODUCT_MODEL := SGH-I317
@@ -26,5 +26,5 @@ PRODUCT_RELEASE_NAME := t0lteatt
 
 # Copy Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/bootanimation/bootanimation_1280_720.zip:system/media/bootanimation.zip
+    vendor/novagen/prebuilt/bootanimation/bootanimation_1280_720.zip:system/media/bootanimation.zip
 

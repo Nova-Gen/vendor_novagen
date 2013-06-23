@@ -1,8 +1,8 @@
 # Common overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/common
 
 # Common dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/dictionaries
 
 # SuperUser
 SUPERUSER_EMBEDDED := true
@@ -56,42 +56,42 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3
 
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
-    vendor/rootbox/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
+    vendor/novagen/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
+    vendor/novagen/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/rootbox/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/rootbox/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
+    vendor/novagen/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/novagen/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/novagen/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
 # Camera effects
 PRODUCT_COPY_FILES +=  \
-    vendor/rootbox/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/rootbox/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/novagen/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/novagen/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # ParanoidAndroid Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/prebuilt/preferences/$(TARGET_PRODUCT)
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/prebuilt/preferences/$(TARGET_PRODUCT)
 
 # Allow device family to add overlays and use a same prop.conf
 ifneq ($(OVERLAY_TARGET),)
-    PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/$(OVERLAY_TARGET)
+    PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/$(OVERLAY_TARGET)
     PA_CONF_SOURCE := $(OVERLAY_TARGET)
 else
     PA_CONF_SOURCE := $(TARGET_PRODUCT)
 endif
 
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
-    vendor/rootbox/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
+    vendor/novagen/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
+    vendor/novagen/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
 
 # init.d
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/common/etc/init.local.rc:root/init.aokp.rc \
-    vendor/rootbox/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
-    vendor/rootbox/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
-    vendor/rootbox/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/rootbox/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/novagen/prebuilt/common/etc/init.local.rc:root/init.aokp.rc \
+    vendor/novagen/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
+    vendor/novagen/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
+    vendor/novagen/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/novagen/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -119,10 +119,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # Inherit common build.prop overrides
--include vendor/rootbox/configs/common_versions.mk
+-include vendor/novagen/configs/common_versions.mk
 
 # T-Mobile theme engine
-include vendor/rootbox/configs/themes_common.mk
+include vendor/novagen/configs/themes_common.mk
 
 # Bring in all audio files
 include frameworks/base/data/sounds/NewAudio.mk

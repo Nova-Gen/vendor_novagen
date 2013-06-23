@@ -1,4 +1,4 @@
 # Inherit common tuff
-$(call inherit-product, vendor/rootbox/configs/common.mk)
+$(call inherit-product, vendor/novagen/configs/common.mk)
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/common_tablets
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/common_tablets

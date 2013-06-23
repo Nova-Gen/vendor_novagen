@@ -10,7 +10,7 @@ ifneq ($(RB_BUILD),)
         ro.goo.developerid=Bajee \
         ro.goo.rom=RootBox \
         ro.goo.version=$(DATE) \
-        ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
+        ro.novagen.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
 else
     ifneq ($(RB_NIGHTLY),)
     # RootBox Nightlies properties
@@ -18,17 +18,17 @@ else
         ro.goo.developerid=Bajee \
         ro.goo.rom=RootBoxNightlies \
         ro.goo.version=$(DATE) \
-        ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
+        ro.novagen.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
     else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.rootbox.version=RootBox-JB-$(TARGET_PRODUCT)-Unofficial-$(DATE)
+        ro.novagen.version=RootBox-JB-$(TARGET_PRODUCT)-Unofficial-$(DATE)
     endif
 endif
 
 # needed for statistics
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.rootbox.branch=$(RB_BRANCH) \
-        ro.rootbox.device=$(RB_PRODUCT)
+        ro.novagen.branch=$(RB_BRANCH) \
+        ro.novagen.device=$(RB_PRODUCT)
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \

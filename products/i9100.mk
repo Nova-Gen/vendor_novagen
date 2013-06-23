@@ -2,19 +2,19 @@
 $(call inherit-product, device/samsung/i9100/full_i9100.mk)
 
 # Inherit GSM common stuff
-$(call inherit-product, vendor/rootbox/configs/gsm.mk)
+$(call inherit-product, vendor/novagen/configs/gsm.mk)
 
 # Inherit RootBox common bits
-$(call inherit-product, vendor/rootbox/configs/common.mk)
+$(call inherit-product, vendor/novagen/configs/common.mk)
 
 # SGS2 overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/rootbox/overlay/s2-common
+PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/overlay/s2-common
 
 # PA OVERLAY_TARGET
 OVERLAY_TARGET := pa_hdpi
 
 # Setup device specific product configuration.
-PRODUCT_NAME := rootbox_i9100
+PRODUCT_NAME := novagen_i9100
 PRODUCT_BRAND := Samsung
 PRODUCT_DEVICE := i9100
 PRODUCT_MODEL := GT-I9100
@@ -26,4 +26,4 @@ PRODUCT_RELEASE_NAME := GT-I9100
 
 # Copy bootanimation.zip
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/bootanimation/bootanimation_800_480.zip:system/media/bootanimation.zip
+    vendor/novagen/prebuilt/bootanimation/bootanimation_800_480.zip:system/media/bootanimation.zip
