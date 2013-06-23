@@ -4,7 +4,7 @@ $(call inherit-product, device/samsung/d2usc/full_d2usc.mk)
 # Inherit CDMA common stuff.
 $(call inherit-product, vendor/novagen/configs/cdma.mk)
 
-# Inherit RootBox common bits
+# Inherit NovaGen common bits
 $(call inherit-product, vendor/novagen/configs/common.mk)
 
 # S3 Overlays

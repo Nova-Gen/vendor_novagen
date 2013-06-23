@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for grouper
 $(call inherit-product, device/asus/grouper/full_grouper.mk)
 
-# Inherit RootBox common_tablet bits
+# Inherit NovaGen common_tablet bits
 $(call inherit-product, vendor/novagen/configs/common_tablet.mk)
 
 # Grouper Overlay

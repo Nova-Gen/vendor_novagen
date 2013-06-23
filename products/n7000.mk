@@ -4,7 +4,7 @@ $(call inherit-product, device/samsung/n7000/full_n7000.mk)
 # Inherit GSM common stuff
 $(call inherit-product, vendor/novagen/configs/gsm.mk)
 
-# Inherit RootBox common bits.
+# Inherit NovaGen common bits.
 $(call inherit-product, vendor/novagen/configs/common.mk)
 
 # Galaxy Note Overlays

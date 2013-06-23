@@ -4,7 +4,7 @@ $(call inherit-product, device/samsung/jfltecan/full_jfltecan.mk)
 # Inherit GSM common stuff
 $(call inherit-product, vendor/novagen/configs/gsm.mk)
 
-# Inherit RootBox common bits
+# Inherit NovaGen common bits
 $(call inherit-product, vendor/novagen/configs/common.mk)
 
 # Galaxy S4 Overlays

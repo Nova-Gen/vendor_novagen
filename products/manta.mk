@@ -1,7 +1,7 @@
 # Inherit AOSP device configuration for manta
 $(call inherit-product, device/samsung/manta/full_manta.mk)
 
-# Inherit RootBox common_tablet bits
+# Inherit NovaGen common_tablet bits
 $(call inherit-product, vendor/novagen/configs/common_tablet.mk)
 
 # Manta Overlay

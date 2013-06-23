@@ -4,7 +4,7 @@ $(call inherit-product, device/samsung/d2att/full_d2att.mk)
 # Inherit GSM common stuff.
 $(call inherit-product, vendor/novagen/configs/gsm.mk)
 
-# Inherit RootBox common bits
+# Inherit NovaGen common bits
 $(call inherit-product, vendor/novagen/configs/common.mk)
 
 # S3 Overlays

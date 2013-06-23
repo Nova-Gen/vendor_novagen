@@ -22,9 +22,9 @@ PRODUCT_PACKAGES += \
     su \
     Torch
 
-# RootBox Packages
+# NovaGen Packages
 PRODUCT_PACKAGES += \
-    RootBox \
+    NovaGen \
     Trebuchet
 
 # CM Packages
@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ParanoidPreferences
 
-# RootBox build.prop tweaks
+# NovaGen build.prop tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.enable.amr.wideband=1 \
     ro.pa.family=$(OVERLAY_TARGET)

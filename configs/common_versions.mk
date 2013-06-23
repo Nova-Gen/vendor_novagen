@@ -5,23 +5,23 @@ DATE = $(shell date +%Y%m%d)
 RB_BRANCH=jb-mr1
 
 ifneq ($(RB_BUILD),)
-    # RootBox Official properties
+    # NovaGen Official properties
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.developerid=Bajee \
-        ro.goo.rom=RootBox \
+        ro.goo.rom=NovaGen \
         ro.goo.version=$(DATE) \
-        ro.novagen.version=RootBox-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
+        ro.novagen.version=NovaGen-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
 else
     ifneq ($(RB_NIGHTLY),)
-    # RootBox Nightlies properties
+    # NovaGen Nightlies properties
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.developerid=Bajee \
-        ro.goo.rom=RootBoxNightlies \
+        ro.goo.rom=NovaGenNightlies \
         ro.goo.version=$(DATE) \
-        ro.novagen.version=RootBox-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
+        ro.novagen.version=NovaGen-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
     else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.novagen.version=RootBox-JB-$(TARGET_PRODUCT)-Unofficial-$(DATE)
+        ro.novagen.version=NovaGen-JB-$(TARGET_PRODUCT)-Unofficial-$(DATE)
     endif
 endif
 

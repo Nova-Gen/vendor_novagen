@@ -143,8 +143,8 @@ $SED -i \
 	-e '/ro\.build\.type/s/eng/user/' \
 	$REPACK/ota/system/build.prop
 
-#Adjust RootBox Version
-echo -e $CL_GRN"Adjusting RootBox Version..."$CL_RST
+#Adjust NovaGen Version
+echo -e $CL_GRN"Adjusting NovaGen Version..."$CL_RST
 sed -i -e 's/novagen_//' $REPACK/ota/system/build.prop
 echo
 
@@ -206,7 +206,7 @@ echo -e  "   \ \ \ \ \/\ \L\ \/\ \L\ \ \ \_\ \ \L\ \/\ \L\ \/>  </"
 echo -e  "    \ \_\ \_\ \____/\ \____/\ \_\ \ \____/\ \____//\_/\_\ "
 echo -e  "     \/_/\/ /\/___/  \/___/  \/__/ \/___/  \/___/ \//\/_/ "
 echo
-echo -e $CL_CYN"===========-RootBox Package complete-==========="$CL_RST
+echo -e $CL_CYN"===========-NovaGen Package complete-==========="$CL_RST
 echo -e $CL_CYN"zip:"$CL_MAG" $OUTFILE"$CL_RST
 echo -e $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
 echo -e $CL_CYN"size:"$CL_MAG" $ZIPSIZE"$CL_RST

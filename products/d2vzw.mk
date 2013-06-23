@@ -7,7 +7,7 @@ $(call inherit-product, vendor/novagen/configs/cdma.mk)
 # Inherit common Verizon Wireless Perms and Lib
 $(call inherit-product, vendor/novagen/configs/vzw.mk)
 
-# Inherit RootBox common bits
+# Inherit NovaGen common bits
 $(call inherit-product, vendor/novagen/configs/common.mk)
 
 # S3 Overlays

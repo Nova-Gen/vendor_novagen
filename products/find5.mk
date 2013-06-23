@@ -4,7 +4,7 @@ $(call inherit-product, device/oppo/find5/full_find5.mk)
 # Inherit GSM common stuff.
 $(call inherit-product, vendor/novagen/configs/gsm.mk)
 
-# Inherit RootBox common bits
+# Inherit NovaGen common bits
 $(call inherit-product, vendor/novagen/configs/common.mk)
 
 # S3 Overlays

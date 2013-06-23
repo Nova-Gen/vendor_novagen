@@ -4,7 +4,7 @@ $(call inherit-product, device/samsung/l900/full_l900.mk)
 # Inherit CDMA common stuff.
 $(call inherit-product, vendor/novagen/configs/cdma.mk)
 
-# Inherit RootBox common bits
+# Inherit NovaGen common bits
 $(call inherit-product, vendor/novagen/configs/common.mk)
 
 # Galaxy Note Overlays
