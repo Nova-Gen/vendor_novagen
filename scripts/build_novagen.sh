@@ -1,5 +1,46 @@
 #!/bin/bash
 
+function usage {
+        echo "usage: `basename $0` [options]"
+        echo " -d device"
+        echo " -s sync"
+        echo " -t threads"
+        echo " -c clean"
+}
+
+while getopts "hd:st:c" opt; do
+  case $opt in
+    d)
+      DEVICE=$OPTARG
+      ;;
+    s)
+      SYNC=sync
+      ;;
+    t)
+      THREADS=$OPTARG
+      echo "threads: $THREADS"
+      ;;
+    r)
+      regexp=$OPTARG
+      ;;
+    c)
+      CLEAN=clean
+      ;;
+    h)
+      usage
+      exit
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG"
+      ;;
+  esac
+done
+
+if [ "$DEVICE" == "" ]; then
+	usage
+	exit
+fi
+
 # Colorize and add text parameters
 red=$(tput setaf 1)             #  red
 grn=$(tput setaf 2)             #  green
@@ -11,19 +52,10 @@ bldblu=${txtbld}$(tput setaf 4) #  blue
 bldcya=${txtbld}$(tput setaf 6) #  cyan
 txtrst=$(tput sgr0)             # Reset
 
-DEVICE="$1"
-SYNC="$2"
-THREADS="$3"
-CLEAN="$4"
-
-# Build Date/Version
-VERSION=`date +%Y%m%d`
-
-
 # Time of build startup
 res1=$(date +%s.%N)
 
-echo -e "${cya}Building ${bldcya}Vanilla NovaGen Nightly-$VERSION ${txtrst}";
+echo -e "${cya}Building ${bldcya}Vanilla NovaGen Nightly ${txtrst}";
 echo -e ""
 echo -e ""
 echo -e "${bldred}**************************************"
@@ -57,7 +89,7 @@ fi
 if [ "$CLEAN" == "clean" ]
 then
    echo -e "${bldblu}Cleaning up out folder ${txtrst}"
-   make clobber;
+   #make clobber;
 else
   echo -e "${bldblu}Skipping out folder cleanup ${txtrst}"
 fi
@@ -70,13 +102,13 @@ echo -e "${bldblu}Setting up build environment ${txtrst}"
 # lunch device
 echo -e ""
 echo -e "${bldblu}Lunching your device ${txtrst}"
-lunch "rootbox_$DEVICE-userdebug";
+$lunch "rootbox_$DEVICE-userdebug";
 
 echo -e ""
 echo -e "${bldblu}Starting NovaGen build for $DEVICE ${txtrst}"
 
 # start compilation
-brunch "rootbox_$DEVICE-userdebug" -j"$THREADS";
+$brunch "rootbox_$DEVICE-userdebug" -j"$THREADS";
 echo -e ""
 
 # finished? get elapsed time
