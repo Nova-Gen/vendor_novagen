@@ -21,3 +21,4 @@ add_lunch_combo novagen_toro-userdebug
 add_lunch_combo novagen_t0lte-userdebug
 add_lunch_combo novagen_t0lteatt-userdebug
 add_lunch_combo novagen_encore-userdebug
+
