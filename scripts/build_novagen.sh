@@ -102,13 +102,13 @@ echo -e "${bldblu}Setting up build environment ${txtrst}"
 # lunch device
 echo -e ""
 echo -e "${bldblu}Lunching your device ${txtrst}"
-$lunch "rootbox_$DEVICE-userdebug";
+$lunch "novagen_$DEVICE-userdebug";
 
 echo -e ""
 echo -e "${bldblu}Starting NovaGen build for $DEVICE ${txtrst}"
 
 # start compilation
-$brunch "rootbox_$DEVICE-userdebug" -j"$THREADS";
+$brunch "novagen_$DEVICE-userdebug" -j"$THREADS";
 echo -e ""
 
 # finished? get elapsed time
