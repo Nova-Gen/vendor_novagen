@@ -2,13 +2,13 @@
 $(call inherit-product, device/bn/encore/full_encore.mk)
 
 # Inherit common product files.
-$(call inherit-product, vendor/rootbox/configs/common.mk)
+$(call inherit-product, vendor/novagen/configs/common.mk)
 
 # PA OVERLAY_TARGET
 OVERLAY_TARGET := pa_encore
 
 # Setup device specific product configuration.
-PRODUCT_NAME := rootbox_encore
+PRODUCT_NAME := novagen_encore
 PRODUCT_BRAND := Bn
 PRODUCT_DEVICE := encore
 PRODUCT_MODEL := NookColor
@@ -18,5 +18,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=encore TARGET_DEVICE=encore BUILD_F
 
 # Copy bootanimation.zip
 PRODUCT_COPY_FILES += \
-    vendor/rootbox/prebuilt/bootanimation/bootanimation_800_480.zip:system/media/bootanimation.zip
+    vendor/novagen/prebuilt/bootanimation/novagen-bootanimation.zip:system/media/bootanimation.zip
 
