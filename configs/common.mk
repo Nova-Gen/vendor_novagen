@@ -20,6 +20,9 @@ PRODUCT_PACKAGES += \
     ROMControl \
     Superuser \
     su \
+    PerformanceControl \
+    Apollo \
+    CMFileManager \
     Torch
 
 # NovaGen Packages
