@@ -55,25 +55,43 @@ txtrst=$(tput sgr0)             # Reset
 # Time of build startup
 res1=$(date +%s.%N)
 
-echo -e "${cya}Building ${bldcya}Vanilla NovaGen Nightly ${txtrst}";
+echo -e "${red}Building ${bldred}Vanilla NovaGen Nightly ${txtrst}";
 echo -e ""
-echo -e ""
-echo -e "${bldred}**************************************"
+echo -e -n "${txtrst}${cya}"
+echo -e "**************************************"
+echo -e -n "${txtrst}${bldcya}"
 echo -e "*                                    *"
+echo -e -n "${txtrst}${cya}"
 echo -e "* n    n                             *"
+echo -e -n "${txtrst}${bldcya}"
 echo -e "* nn   n   oooo   v       v    a     *"
+echo -e -n "${txtrst}${cya}"
 echo -e "* n n  n  o    o   v     v    a a    *"
+echo -e -n "${txtrst}${bldcya}"
 echo -e "* n  n n  o    o    v   v    a   a   *"
+echo -e -n "${txtrst}${cya}"
 echo -e "* n   nn  o    o     v v    a aaa a  *"
+echo -e -n "${txtrst}${bldcya}"
 echo -e "* n    n   oooo       v    a       a *"
+echo -e -n "${txtrst}${cya}"
 echo -e "*                                    *"
-echo -e "${bldgrn}*        ggg                         *"
+echo -e -n "${txtrst}${bldcya}"
+echo -e "*                                    *"
+echo -e -n "${txtrst}${cya}"
+echo -e "*        ggg                         *"
+echo -e -n "${txtrst}${bldcya}"
 echo -e "*       g       eeee   n   n         *"
+echo -e -n "${txtrst}${cya}"
 echo -e "*       g  gg   e      nn  n         *"
+echo -e -n "${txtrst}${bldcya}"
 echo -e "*       g   g   eeee   n n n         *"
+echo -e -n "${txtrst}${cya}"
 echo -e "*       g   g   e      n  nn         *"
+echo -e -n "${txtrst}${bldcya}"
 echo -e "*        ggg    eeeee  n   n         *"
+echo -e -n "${txtrst}${cya}"
 echo -e "*                                    *"
+echo -e -n "${txtrst}${bldcya}"
 echo -e "**************************************${txtrst}"
 
 # sync with latest sources
@@ -102,13 +120,14 @@ echo -e "${bldblu}Setting up build environment ${txtrst}"
 # lunch device
 echo -e ""
 echo -e "${bldblu}Lunching your device ${txtrst}"
-$lunch "novagen_$DEVICE-userdebug";
+lunch "novagen_$DEVICE-userdebug";
 
 echo -e ""
 echo -e "${bldblu}Starting NovaGen build for $DEVICE ${txtrst}"
 
 # start compilation
-$brunch "novagen_$DEVICE-userdebug" -j"$THREADS";
+breakfast "novagen_$DEVICE-userdebug"
+mka -j$THREADS bacon
 echo -e ""
 
 # finished? get elapsed time
