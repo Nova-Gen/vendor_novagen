@@ -13,7 +13,7 @@ OVERLAY_TARGET := pa_olympus
 # Setup device specific product configuration.
 PRODUCT_NAME := novagen_olympus
 PRODUCT_BRAND := Motorola
-PRODUCT_DEVICE := olympua
+PRODUCT_DEVICE := olympus
 PRODUCT_MODEL := Atrix4G
 PRODUCT_MANUFACTURER := Motorola
 
