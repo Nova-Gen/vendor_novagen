@@ -23,4 +23,5 @@ $(LOCAL_DIR)/quincyatt.mk \
 $(LOCAL_DIR)/toro.mk \
 $(LOCAL_DIR)/t0lte.mk \
 $(LOCAL_DIR)/t0lteatt.mk \
-$(LOCAL_DIR)/encore.mk
+$(LOCAL_DIR)/encore.mk \
+$(LOCAL_DIR)/olympus.mk
