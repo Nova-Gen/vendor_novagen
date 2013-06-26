@@ -9,7 +9,11 @@ add_lunch_combo novagen_i605-userdebug
 add_lunch_combo novagen_i9100-userdebug
 add_lunch_combo novagen_i9100g-userdebug
 add_lunch_combo novagen_i9300-userdebug
+add_lunch_combo novagen_jflteatt-userdebug
 add_lunch_combo novagen_jfltecan-userdebug
+add_lunch_combo novagen_jfltespr-userdebug
+add_lunch_combo novagen_jfltetmo-userdebug
+add_lunch_combo novagen_jfltevzw-userdebug
 add_lunch_combo novagen_l900-userdebug
 add_lunch_combo novagen_maguro-userdebug
 add_lunch_combo novagen_mako-userdebug
@@ -21,4 +25,3 @@ add_lunch_combo novagen_toro-userdebug
 add_lunch_combo novagen_t0lte-userdebug
 add_lunch_combo novagen_t0lteatt-userdebug
 add_lunch_combo novagen_encore-userdebug
-

@@ -12,7 +12,6 @@ SUPERUSER_PACKAGE_PREFIX := com.android.settings.rb.superuser
 PRODUCT_PACKAGES += \
     AOKPtips \
     AppWidgetPicker \
-    GooManager \
     LatinImeDictionaryPack \
     mGerrit \
     Microbes \
@@ -67,11 +66,6 @@ PRODUCT_COPY_FILES += \
     vendor/novagen/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/novagen/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/novagen/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
-
-# Camera effects
-PRODUCT_COPY_FILES +=  \
-    vendor/novagen/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/novagen/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # ParanoidAndroid Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/novagen/prebuilt/preferences/$(TARGET_PRODUCT)
