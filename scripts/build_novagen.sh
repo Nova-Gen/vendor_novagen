@@ -58,41 +58,16 @@ res1=$(date +%s.%N)
 echo -e "${red}Building ${bldred}Vanilla NovaGen Nightly ${txtrst}";
 echo -e ""
 echo -e -n "${txtrst}${cya}"
-echo -e "**************************************"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "*                                    *"
-echo -e -n "${txtrst}${cya}"
-echo -e "* n    n                             *"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "* nn   n   oooo   v       v    a     *"
-echo -e -n "${txtrst}${cya}"
-echo -e "* n n  n  o    o   v     v    a a    *"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "* n  n n  o    o    v   v    a   a   *"
-echo -e -n "${txtrst}${cya}"
-echo -e "* n   nn  o    o     v v    a aaa a  *"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "* n    n   oooo       v    a       a *"
-echo -e -n "${txtrst}${cya}"
-echo -e "*                                    *"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "*                                    *"
-echo -e -n "${txtrst}${cya}"
-echo -e "*        ggg                         *"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "*       g       eeee   n   n         *"
-echo -e -n "${txtrst}${cya}"
-echo -e "*       g  gg   e      nn  n         *"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "*       g   g   eeee   n n n         *"
-echo -e -n "${txtrst}${cya}"
-echo -e "*       g   g   e      n  nn         *"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "*        ggg    eeeee  n   n         *"
-echo -e -n "${txtrst}${cya}"
-echo -e "*                                    *"
-echo -e -n "${txtrst}${bldcya}"
-echo -e "**************************************${txtrst}"
+echo -e ' __    __                                ______'
+echo -e '|  \  |  \                              /      \                     '
+echo -e '| $$\ | $$  ______  __     __  ______  |  $$$$$$\  ______   _______  '
+echo -e '| $$$\| $$ /      \|  \   /  \|      \ | $$ __\$$ /      \ |       \ '
+echo -e '| $$$$\ $$|  $$$$$$\\$$\ /  $$ \$$$$$$\| $$|    \|  $$$$$$\| $$$$$$$\'
+echo -e '| $$\$$ $$| $$  | $$ \$$\  $$ /      $$| $$ \$$$$| $$    $$| $$  | $$'
+echo -e '| $$ \$$$$| $$__/ $$  \$$ $$ |  $$$$$$$| $$__| $$| $$$$$$$$| $$  | $$'
+echo -e '| $$  \$$$ \$$    $$   \$$$   \$$    $$ \$$    $$ \$$     \| $$  | $$'
+echo -e ' \$$   \$$  \$$$$$$     \$     \$$$$$$$  \$$$$$$   \$$$$$$$ \$$   \$$'
+echo -e "${txtrst}"
 
 # sync with latest sources
 echo -e ""
