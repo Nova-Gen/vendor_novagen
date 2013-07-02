@@ -91,8 +91,6 @@ echo -e '| $$  \$$$ \$$    $$   \$$$   \$$    $$ \$$    $$ \$$     \| $$  | $$'
 echo -e ' \$$   \$$  \$$$$$$     \$     \$$$$$$$  \$$$$$$   \$$$$$$$ \$$   \$$'
 echo -e "${txtrst}"
 
-exit
-
 # sync with latest sources
 echo -e ""
 if [ "$SYNC" == "sync" ]
