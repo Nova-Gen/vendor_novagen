@@ -77,7 +77,7 @@ txtrst=$(tput sgr0)             # Reset
 # Time of build startup
 res1=$(date +%s.%N)
 
-echo -e "${red}Building ${bldred}Vanilla NovaGen Nightly ${txtrst}";
+echo -e "${red}Building ${bldred}NovaGen Nightly ${txtrst}";
 echo -e ""
 echo -e -n "${txtrst}${cya}"
 echo -e ' __    __                                ______'
