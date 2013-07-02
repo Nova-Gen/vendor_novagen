@@ -41,6 +41,28 @@ if [ "$DEVICE" == "" ]; then
 	exit
 fi
 
+# Setup Linaro symlinks
+LINARO_DIR=linaro-4.7
+#LINARO_DIR=linaro-4.6
+cd prebuilts/gcc/linux-x86/arm
+if test -h arm-eabi-4.7; then
+        rm arm-eabi-4.7
+fi
+ln -s $LINARO_DIR arm-eabi-4.7
+if test -h arm-eabi-4.6; then
+        rm arm-eabi-4.6
+fi
+ln -s $LINARO_DIR arm-eabi-4.6
+if test -h arm-linux-androideabi-4.7; then
+        rm arm-linux-androideabi-4.7
+fi
+ln -s $LINARO_DIR arm-linux-androideabi-4.7
+if test -h arm-linux-androideabi-4.6; then
+        rm arm-linux-androideabi-4.6
+fi
+ln -s $LINARO_DIR arm-linux-androideabi-4.6
+cd ../../../../
+
 # Colorize and add text parameters
 red=$(tput setaf 1)             #  red
 grn=$(tput setaf 2)             #  green
