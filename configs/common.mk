@@ -22,7 +22,8 @@ PRODUCT_PACKAGES += \
     PerformanceControl \
     Apollo \
     CMFileManager \
-    Torch
+    Torch \
+    NovagenUpdates
 
 # NovaGen Packages
 PRODUCT_PACKAGES += \
