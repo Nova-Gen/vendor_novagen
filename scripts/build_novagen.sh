@@ -36,6 +36,11 @@ while getopts "hd:st:c" opt; do
   esac
 done
 
+if [ "$JAVA_HOME" == "" ]; then
+	echo -e "${red}JAVA_HOME environment variable not set. Cannot continue build!"
+	exit 1
+fi
+
 if [ "$DEVICE" == "" ]; then
 	usage
 	exit
@@ -100,11 +105,18 @@ then
    echo -e ""
 fi
 
+if test -d out; then
+	echo -e "${red}build cannot continue; directory 'out' is present"
+	exit 1
+fi
+
+mv out.$DEVICE out
+
 # setup environment
 if [ "$CLEAN" == "clean" ]
 then
    echo -e "${bldblu}Cleaning up out folder ${txtrst}"
-   #make clobber;
+   make clobber
 else
   echo -e "${bldblu}Skipping out folder cleanup ${txtrst}"
 fi
@@ -126,6 +138,8 @@ echo -e "${bldblu}Starting NovaGen build for $DEVICE ${txtrst}"
 breakfast "novagen_$DEVICE-userdebug"
 mka -j$THREADS bacon
 echo -e ""
+
+mv out out.$DEVICE
 
 # finished? get elapsed time
 res2=$(date +%s.%N)
