@@ -28,7 +28,9 @@ PRODUCT_PACKAGES += \
 # NovaGen Packages
 PRODUCT_PACKAGES += \
     NovaGen \
-    Trebuchet
+    RootBoxPapers \
+    Trebuchet \
+    RootBox.apk
 
 # CM Packages
 PRODUCT_PACKAGES += \
