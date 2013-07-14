@@ -4,18 +4,35 @@ Based on RootBox 4.2.2 HEAD repository +
 
 Date		Device		Change
 ===========	============	====================================================
-07/14/2013	(d2att)		Beta build release
-07/17/2013 	(d2*)	 	Updated kernel 3.4.53
-07/09/2013 	(d2att) 	Released build
-07/07/2013 	(d2*)	 	Updated kernel 3.4.52
-07/07/2013 	(*)		Increased media volume steps to 30
+07/14/2013	(d2att)		(n) Beta build release
+07/13/2013	(*)		Sync to Root-Box HEAD repositories
+				(r) libbt: BT USB support
+				(r) Fix deadlock of WebViewCoreThread
+				(r) Frameworks: recreate on theme change SlimPIE as well
+				(r) Frameworks: SlimPIE optimize optimize optimize
+				(r) Frameworks: Allow smaller SlimPIE sizes + multiDpi fixes (1/2)
+				(r) Fix: external storage problem PIE applications + last optimize
+				(r) Frameworks: SlimPIE trigger corrections
+				(r) Frameworks: longpress button PIE color does not change on the fly
+				(r) Frameworks: make right pie mirror optional (1/2)
+				(r) Fix: reported disable redundant statusbar information
+				(r) Fix: reported back button custom Icon issue
+				(r) Reduced padding on pie to screen edges
+				(r) Frameworks: SlimPIE second layer (1/2)
+				(r) Frameworks: fix possible NPE
+07/12/2013 	(d2*)	 	(n) Updated kernel 3.4.53
+07/09/2013 	(d2att) 	(n) Released build
+07/07/2013 	(d2*)	 	(n) Updated kernel 3.4.52
+07/07/2013 	(*)		(n) Increased media volume steps to 30
 07/04/2013	(*)		(m) Corrected CUSTOM_VIBRATION and
-				 CUSTOM_NOTIFICATION
+				(m) CUSTOM_NOTIFICATION
 07/04/2013	(*)		(m) Added CUSTOM_NOTIFICATION
 07/04/2013	(*)		(m) Fixed serialization problem in
-				 ContactLoaderFragment.java inner class
-07/04/2013	(*)		Added Linaro optimization flags
+				(m) ContactLoaderFragment.java inner class
+07/04/2013	(*)		(n) Added Linaro optimization flags
 
 ====================================================================================
 
+(n) = Nova-Gen change
 (m) = Change has been merged into Root-Box base code
+(r) = Root-Box base code change
