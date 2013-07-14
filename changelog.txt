@@ -20,6 +20,9 @@ Date		Device		Change
 				(r) Reduced padding on pie to screen edges
 				(r) Frameworks: SlimPIE second layer (1/2)
 				(r) Frameworks: fix possible NPE
+				(r) Prompt users Mms can't receive msgs if storage is full
+				(r) MMS Prevent FC in low memory conditions
+				(r) Mms: Delay unicode stripping from a message
 07/12/2013 	(d2*)	 	(n) Updated kernel 3.4.53
 07/09/2013 	(d2att) 	(n) Released build
 07/07/2013 	(d2*)	 	(n) Updated kernel 3.4.52
