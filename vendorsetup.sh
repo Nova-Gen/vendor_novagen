@@ -14,6 +14,7 @@ add_lunch_combo novagen_jfltecan-userdebug
 add_lunch_combo novagen_jfltespr-userdebug
 add_lunch_combo novagen_jfltetmo-userdebug
 add_lunch_combo novagen_jfltevzw-userdebug
+add_lunch_combo novagen_jfltexx-userdebug
 add_lunch_combo novagen_l900-userdebug
 add_lunch_combo novagen_maguro-userdebug
 add_lunch_combo novagen_mako-userdebug
