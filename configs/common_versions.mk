@@ -10,6 +10,7 @@ ifneq ($(RB_BUILD),)
         ro.goo.developerid=Bajee \
         ro.goo.rom=NovaGen \
         ro.goo.version=$(DATE) \
+        ro.novagen.build=$(DATE) \
         ro.novagen.version=NovaGen-JB-$(TARGET_PRODUCT)-$(RB_BUILD)
 else
     ifneq ($(RB_NIGHTLY),)
@@ -18,6 +19,7 @@ else
         ro.goo.developerid=Bajee \
         ro.goo.rom=NovaGenNightlies \
         ro.goo.version=$(DATE) \
+        ro.novagen.build=$(DATE) \
         ro.novagen.version=NovaGen-JB-$(TARGET_PRODUCT)-Nightly-$(DATE)
     else
     PRODUCT_PROPERTY_OVERRIDES += \
