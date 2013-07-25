@@ -129,3 +129,6 @@ include frameworks/base/data/sounds/NewAudio.mk
 
 # Extra Ringtones
 include frameworks/base/data/sounds/AudioPackageNewWave.mk
+
+# Multi-User Support 
+PRODUCT_PROPERTY_OVERRIDES += fw.max_users=8
