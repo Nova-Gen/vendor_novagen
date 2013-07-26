@@ -4,7 +4,6 @@ Based on RootBox 4.2.2 HEAD repository +
 
 Date		Device		Change
 ===========	============	====================================================
-07/25/2013      (*)             Basic Multi-User Support (need polishing)
 07/24/2013 	(d2*)	 	(n) Updated kernel 3.4.54
 07/24/2013	(*)		New Boot Animation (Provided by drinferno)
 07/24/2013	(*)		Sync to Root-Box/CM/AOKP/PA HEAD repositories
