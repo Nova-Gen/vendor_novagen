@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += \
     NovaGen \
     RootBoxPapers \
     Trebuchet \
-    RootBox.apk
+    RootBox
 
 # CM Packages
 PRODUCT_PACKAGES += \
