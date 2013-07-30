@@ -6,9 +6,10 @@ function usage {
         echo " -s sync"
         echo " -t threads"
         echo " -c clean"
+	echo " -z use cache"
 }
 
-while getopts "hd:st:c" opt; do
+while getopts "hd:st:cz" opt; do
   case $opt in
     d)
       DEVICE=$OPTARG
@@ -25,6 +26,10 @@ while getopts "hd:st:c" opt; do
       ;;
     c)
       CLEAN=clean
+      ;;
+    z)
+      echo "using ccache..."
+      export USE_CCACHE=1
       ;;
     h)
       usage
