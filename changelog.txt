@@ -4,6 +4,7 @@ Based on RootBox 4.2.2 HEAD repository +
 
 Date		Device		Change
 ===========	============	====================================================
+08/06/2013	(d2*)           (n) Enabled Fast-Charge in kernel
 07/29/2013	(d2att)		(n) Beta build release
 07/29/2013	(*)		Sync to Root-Box/CM/AOKP/PA HEAD repositories
 07/28/2013 	(d2*)	 	(n) Updated kernel 3.4.55
