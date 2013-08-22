@@ -41,6 +41,8 @@ while getopts "hd:st:cz" opt; do
   esac
 done
 
+cur_dir=`pwd`
+
 if [ "$JAVA_HOME" == "" ]; then
 	echo -e "${red}JAVA_HOME environment variable not set. Cannot continue build!"
 	exit 1
@@ -115,7 +117,9 @@ if test -d out; then
 	exit 1
 fi
 
-mv out.$DEVICE out
+#mv out.$DEVICE out
+cur_dir=`pwd`
+export OUT_DIR_COMMON_BASE=${cur_dir}/out.${DEVICE}
 
 # setup environment
 if [ "$CLEAN" == "clean" ]
@@ -144,7 +148,7 @@ breakfast "novagen_$DEVICE-userdebug"
 mka -j$THREADS bacon
 echo -e ""
 
-mv out out.$DEVICE
+#mv out out.$DEVICE
 
 # finished? get elapsed time
 res2=$(date +%s.%N)
